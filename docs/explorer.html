@@ -30,59 +30,51 @@
         <div class="container">
             <div class="explorer-header">
                 <h1 class="section-title">🔍 Question Explorer</h1>
-                <p class="explorer-subtitle">Explore all 26 questions and see how each model responded</p>
+                <p class="explorer-subtitle">Click on any colored box to see the model's response and judge reasoning</p>
             </div>
 
-            <!-- Filters -->
-            <div class="filters">
-                <div class="filter-group">
-                    <label>Search Mode:</label>
-                    <select id="mode-filter">
-                        <option value="all">All Modes</option>
-                        <option value="NO SEARCH">No Search</option>
-                        <option value="WITH SEARCH">With Search</option>
-                    </select>
-                </div>
-                <div class="filter-group">
-                    <label>Model:</label>
-                    <select id="model-filter">
-                        <option value="all">All Models</option>
-                    </select>
-                </div>
-                <div class="filter-group">
-                    <label>Difficulty:</label>
-                    <select id="difficulty-filter">
-                        <option value="all">All</option>
-                        <option value="5">⭐⭐⭐⭐⭐ Very Hard</option>
-                        <option value="4">⭐⭐⭐⭐ Hard</option>
-                        <option value="3">⭐⭐⭐ Medium</option>
-                        <option value="2">⭐⭐ Easy</option>
-                        <option value="1">⭐ Very Easy</option>
-                    </select>
-                </div>
-                <div class="filter-group">
-                    <label>Result:</label>
-                    <select id="result-filter">
-                        <option value="all">All Results</option>
-                        <option value="correct">✅ Correct Only</option>
-                        <option value="incorrect">❌ Incorrect Only</option>
-                    </select>
+            <!-- Mode Filter -->
+            <div class="mode-filter">
+                <label>Mode:</label>
+                <div class="mode-toggle">
+                    <button class="mode-btn active" data-mode="NO SEARCH">No Search</button>
+                    <button class="mode-btn" data-mode="WITH SEARCH">With Search</button>
                 </div>
             </div>
 
-            <!-- Question Navigation -->
-            <div class="question-nav">
-                <button id="prev-btn" class="nav-btn">← Previous</button>
-                <span id="question-counter" class="question-counter">Question 1 of 26</span>
-                <button id="next-btn" class="nav-btn">Next →</button>
+            <!-- Results Table -->
+            <div class="results-table-container">
+                <table class="results-table" id="results-table">
+                    <!-- Will be populated by JavaScript -->
+                </table>
             </div>
 
-            <!-- Question Display -->
-            <div id="question-display" class="question-display">
-                <!-- Will be populated by JavaScript -->
+            <!-- Legend -->
+            <div class="legend">
+                <div class="legend-item">
+                    <div class="trial-box correct"></div>
+                    <span>Correct Answer</span>
+                </div>
+                <div class="legend-item">
+                    <div class="trial-box incorrect"></div>
+                    <span>Incorrect Answer</span>
+                </div>
+                <div class="legend-item">
+                    <span style="margin-left: 1rem;">Each cell shows 3 trials - click any box to view details</span>
+                </div>
             </div>
         </div>
     </section>
+
+    <!-- Modal for response details -->
+    <div id="response-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div id="modal-body">
+                <!-- Will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
