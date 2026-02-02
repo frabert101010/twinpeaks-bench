@@ -63,7 +63,7 @@ function applyFilters() {
                 if (filters.mode !== 'all' && r.mode !== filters.mode) return false;
                 if (filters.model !== 'all' && r.model !== filters.model) return false;
                 if (filters.result !== 'all') {
-                    const isCorrect = r.is_correct === true || r.is_correct === 'True';
+                    const isCorrect = r.score === 1 || r.score === '1';
                     if (filters.result === 'correct' && !isCorrect) return false;
                     if (filters.result === 'incorrect' && isCorrect) return false;
                 }
@@ -99,7 +99,7 @@ function renderQuestion() {
     // Build question header
     const headerHTML = `
         <div class="question-header">
-            <div class="question-id">${question.question_id}</div>
+            <div class="question-id">${question.id}</div>
             <div class="question-text">${question.question}</div>
             <div class="question-meta">
                 <div class="meta-item">
@@ -131,7 +131,7 @@ function renderQuestion() {
     }
     if (filters.result !== 'all') {
         responses = responses.filter(r => {
-            const isCorrect = r.is_correct === true || r.is_correct === 'True';
+            const isCorrect = r.score === 1 || r.score === '1';
             return filters.result === 'correct' ? isCorrect : !isCorrect;
         });
     }
@@ -165,14 +165,14 @@ function renderQuestion() {
 
 // Render a single response
 function renderResponse(response, index) {
-    const isCorrect = response.is_correct === true || response.is_correct === 'True';
+    const isCorrect = response.score === 1 || response.score === '1';
     const correctClass = isCorrect ? 'correct' : 'incorrect';
     const resultEmoji = isCorrect ? '✅' : '❌';
 
     const responseId = `response-${index}`;
-    const shortText = response.answer.length > 200
-        ? response.answer.substring(0, 200) + '...'
-        : response.answer;
+    const shortText = response.response.length > 200
+        ? response.response.substring(0, 200) + '...'
+        : response.response;
 
     return `
         <div class="response-card ${correctClass}">
@@ -188,16 +188,16 @@ function renderResponse(response, index) {
                 ${shortText}
             </div>
 
-            ${response.answer.length > 200 ? `
+            ${response.response.length > 200 ? `
                 <button class="response-toggle" data-response="${responseId}">
                     Show full answer
                 </button>
             ` : ''}
 
-            ${response.judge_reasoning ? `
+            ${response.reasoning ? `
                 <div class="response-meta">
                     <div class="response-meta-item">
-                        <strong>Judge:</strong> ${response.judge_reasoning}
+                        <strong>Judge:</strong> ${response.reasoning}
                     </div>
                 </div>
             ` : ''}
@@ -218,17 +218,17 @@ function toggleResponse(responseId) {
     if (filters.model !== 'all') responses = responses.filter(r => r.model === filters.model);
     if (filters.result !== 'all') {
         responses = responses.filter(r => {
-            const isCorrect = r.is_correct === true || r.is_correct === 'True';
+            const isCorrect = r.score === 1 || r.score === '1';
             return filters.result === 'correct' ? isCorrect : !isCorrect;
         });
     }
     const response = responses[index];
 
     if (btn.textContent === 'Show full answer') {
-        element.textContent = response.answer;
+        element.textContent = response.response;
         btn.textContent = 'Show less';
     } else {
-        const shortText = response.answer.substring(0, 200) + '...';
+        const shortText = response.response.substring(0, 200) + '...';
         element.textContent = shortText;
         btn.textContent = 'Show full answer';
     }
