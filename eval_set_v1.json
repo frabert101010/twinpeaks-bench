@@ -1,0 +1,190 @@
+{
+  "eval_name": "TwinPeaks Bench V1",
+  "version": "1.0",
+  "created_at": "2026-01-04",
+  "description": "TwinPeaks knowledge evaluation benchmark with 26 questions covering obscure details from the series - V1 prompts (removed twin_peaks_022 due to incorrect expected answer)",
+  "test_cases": [
+    {
+      "id": "twin_peaks_001",
+      "category": "twin_peaks",
+      "domain": "Twin Peaks",
+      "prompt": "What does Hawk find in the restroom in season 3 that has to do with its heritage?",
+      "expected_answer": "Pages from secret diary of laura palmer"
+    },
+    {
+      "id": "twin_peaks_002",
+      "category": "twin_peaks",
+      "domain": "Twin Peaks",
+      "prompt": "What's the name of the lady living in the palmers house at the end of season 3 of twin peaks? ",
+      "expected_answer": "Alice Tremond"
+    },
+    {
+      "id": "twin_peaks_003",
+      "category": "twin_peaks",
+      "domain": "Twin Peaks",
+      "prompt": "In the last episode of twin peaks season 3, who is most likely the counterpart of Carry page in the original timeline/universe?",
+      "expected_answer": "Laura Palmer"
+    },
+    {
+      "id": "twin_peaks_004",
+      "category": "twin_peaks",
+      "domain": "Twin Peaks",
+      "prompt": "What's name of corn eaten by demons in black lodge in twin peaks",
+      "expected_answer": "Garmonbozia"
+    },
+    {
+      "id": "twin_peaks_005",
+      "category": "twin_peaks",
+      "domain": "Twin Peaks",
+      "prompt": "In twin peaks season 3, what is the original name of the entity Judy?",
+      "expected_answer": "Jowday"
+    },
+    {
+      "id": "twin_peaks_006",
+      "category": "twin_peaks",
+      "domain": "Twin Peaks",
+      "prompt": "What is the second hint from the giant to agent dale cooper?",
+      "expected_answer": "Owls are not what they seem"
+    },
+    {
+      "id": "twin_peaks_007",
+      "category": "twin_peaks",
+      "domain": "Twin Peaks",
+      "prompt": "What's the song played when mr c is driving in the forest on the way to pick up ray and darya?",
+      "expected_answer": "American woman david lynch remix"
+    },
+    {
+      "id": "twin_peaks_008",
+      "category": "twin_peaks",
+      "domain": "Twin Peaks",
+      "prompt": "What's the color of the hair of the actual Diane in last episode of twin peaks?",
+      "expected_answer": "red"
+    },
+    {
+      "id": "twin_peaks_009",
+      "category": "twin_peaks",
+      "domain": "Twin Peaks",
+      "prompt": "In twin peaks season 3, What's last question Mr c asks philipp jeffrey when meeting him?",
+      "expected_answer": "who is judy?"
+    },
+    {
+      "id": "twin_peaks_010",
+      "category": "twin_peaks",
+      "domain": "Twin Peaks",
+      "prompt": "In twin peaks season 3, How much money is Shelly giving to Becky at double R?",
+      "expected_answer": "72$"
+    },
+    {
+      "id": "twin_peaks_011",
+      "category": "twin_peaks",
+      "domain": "Twin Peaks",
+      "prompt": "Try to guess: Chris haisaak is walking in a RV park. He is an agent, and he sees a car with something written on the main glass. What's the sentence saying?",
+      "expected_answer": "Let's rock"
+    },
+    {
+      "id": "twin_peaks_012",
+      "category": "twin_peaks",
+      "domain": "Twin Peaks",
+      "prompt": "When opening the safe to show the two accounting books to Sheriff truman. Josie finds only one of them. Which ones she finds? The true one, or the fake one?",
+      "expected_answer": "fake"
+    },
+    {
+      "id": "twin_peaks_013",
+      "category": "twin_peaks",
+      "domain": "Twin Peaks",
+      "prompt": "What's the animal that whispers Judy towrds the end of fire walk with me?",
+      "expected_answer": "Monkey"
+    },
+    {
+      "id": "twin_peaks_014",
+      "category": "twin_peaks",
+      "domain": "Twin Peaks",
+      "prompt": "In twin peaks season 3, Who are the two people watching at DR jacobi video about golden sovels? ",
+      "expected_answer": "Jerry horne and Nadine"
+    },
+    {
+      "id": "twin_peaks_015",
+      "category": "twin_peaks",
+      "domain": "Twin Peaks",
+      "prompt": "In twin peaks season 3, How much money does cooper mr jackpot wins at the silver mustang?",
+      "expected_answer": "425000"
+    },
+    {
+      "id": "twin_peaks_016",
+      "category": "twin_peaks",
+      "domain": "Twin Peaks",
+      "prompt": "In twin peaks season 3, How much money does cooper/dougie owns to the sharks? ",
+      "expected_answer": "52000"
+    },
+    {
+      "id": "twin_peaks_017",
+      "category": "twin_peaks",
+      "domain": "Twin Peaks",
+      "prompt": "In the last episode of twin peaks 3, what's the name of the cafe where coopers drops a gun into frying oil after defeating two guys?",
+      "expected_answer": "Judy"
+    },
+    {
+      "id": "twin_peaks_018",
+      "category": "twin_peaks",
+      "domain": "Twin Peaks",
+      "prompt": "What's the plate of dougie jones in Twin peaks",
+      "expected_answer": "DUGE LV"
+    },
+    {
+      "id": "twin_peaks_019",
+      "category": "twin_peaks",
+      "domain": "Twin Peaks",
+      "prompt": "In season 3 of twin peaks, what's the time on the watch of the Ronette Pulaski looking girl?",
+      "expected_answer": "2:53"
+    },
+    {
+      "id": "twin_peaks_020",
+      "category": "twin_peaks",
+      "domain": "Twin Peaks",
+      "prompt": "Which song leand palmer is singing that makes Ben Horne dance on the desk ",
+      "expected_answer": "Mairzy Doats"
+    },
+    {
+      "id": "twin_peaks_021",
+      "category": "twin_peaks",
+      "domain": "Twin Peaks",
+      "prompt": "When the black lodge is shown for first time in twin peaks, what is the color (or colors) of agent cooper tie?",
+      "expected_answer": "Black and red"
+    },
+    {
+      "id": "twin_peaks_023",
+      "category": "twin_peaks",
+      "domain": "Twin Peaks",
+      "prompt": "In twin peaks, what did Mike see that made him decide to cut his arm off?",
+      "expected_answer": "The face of god"
+    },
+    {
+      "id": "twin_peaks_024",
+      "category": "twin_peaks",
+      "domain": "Twin Peaks",
+      "prompt": "In twin peaks the return, which items does MR C have in the trunk when arrested? ",
+      "expected_answer": "Cocaine, machine gun, dog leg"
+    },
+    {
+      "id": "twin_peaks_025",
+      "category": "twin_peaks",
+      "domain": "Twin Peaks",
+      "prompt": "In twin peaks the return, what is the second gift from the Mitchum brothers to Mullins, during office celebration after receiving the 30 million?",
+      "expected_answer": "Set of monogrammed diamond cufflinks"
+    },
+    {
+      "id": "twin_peaks_026",
+      "category": "twin_peaks",
+      "domain": "Twin Peaks",
+      "prompt": "What's the name of the waiter that in twin peaks return tells cooper to go back to seating and wait for the cherry pie to be served at Szymon's?",
+      "expected_answer": "Leslie"
+    },
+    {
+      "id": "twin_peaks_027",
+      "category": "twin_peaks",
+      "domain": "Twin Peaks",
+      "prompt": "In twin peaks, what is the exact coordinate number diane sends to mr c before attempting to kill gordon cole albert and tammy?",
+      "expected_answer": "48551420117163956"
+    }
+  ]
+}

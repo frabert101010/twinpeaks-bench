@@ -1,0 +1,42 @@
+# API Keys and Secrets
+.env
+
+# Database (large file with evaluation history)
+eval_history.db
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Result Files (can be regenerated)
+*.csv
+!twinpeaks_v1_detailed_results.csv
+!twinpeaks_v1_summary_results.csv
+
+# Backups
+*.bak
+backups/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Claude Code
+.claude/
+
+# Verification files
+search_verification_*.json
+
+# Temporary files
+*.tmp
+*.log

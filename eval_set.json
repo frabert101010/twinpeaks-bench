@@ -1,0 +1,141 @@
+{
+  "eval_name": "FraB Bench",
+  "version": "2.1",
+  "created_at": "2025-12-15",
+  "description": "Expanded Twin Peaks knowledge evaluation benchmark with 19 questions covering obscure details from the series",
+  "test_cases": [
+    {
+      "id": "twin_peaks_001",
+      "category": "twin_peaks",
+      "domain": "Twin Peaks",
+      "prompt": "What does Hawk find in the restroom in season 3 that has to do with its heritage?",
+      "expected_answer": "Pages from secret diary of Laura Palmer"
+    },
+    {
+      "id": "twin_peaks_002",
+      "category": "twin_peaks",
+      "domain": "Twin Peaks",
+      "prompt": "What's the name of the lady living in the Palmers house at the end of season 3 of Twin Peaks?",
+      "expected_answer": "Alice Tremond"
+    },
+    {
+      "id": "twin_peaks_003",
+      "category": "twin_peaks",
+      "domain": "Twin Peaks",
+      "prompt": "In the last episode of Twin Peaks season 3, who is most likely the counterpart of Carrie Page in the original timeline/universe?",
+      "expected_answer": "Laura Palmer"
+    },
+    {
+      "id": "twin_peaks_004",
+      "category": "twin_peaks",
+      "domain": "Twin Peaks",
+      "prompt": "What's name of corn eaten by demons in black lodge in Twin Peaks?",
+      "expected_answer": "Garmonbozia"
+    },
+    {
+      "id": "twin_peaks_005",
+      "category": "twin_peaks",
+      "domain": "Twin Peaks",
+      "prompt": "In Twin Peaks season 3, what is the original name of the entity Judy?",
+      "expected_answer": "Jowday"
+    },
+    {
+      "id": "twin_peaks_006",
+      "category": "twin_peaks",
+      "domain": "Twin Peaks",
+      "prompt": "What is the second hint from the giant to agent Dale Cooper?",
+      "expected_answer": "Owls are not what they seem"
+    },
+    {
+      "id": "twin_peaks_007",
+      "category": "twin_peaks",
+      "domain": "Twin Peaks",
+      "prompt": "What's the song played when Mr. C is driving in the forest on the way to pick up Ray and Darya?",
+      "expected_answer": "American Woman David Lynch remix"
+    },
+    {
+      "id": "twin_peaks_008",
+      "category": "twin_peaks",
+      "domain": "Twin Peaks",
+      "prompt": "What's the color of the hair of the actual Diane in last episode of Twin Peaks?",
+      "expected_answer": "red"
+    },
+    {
+      "id": "twin_peaks_009",
+      "category": "twin_peaks",
+      "domain": "Twin Peaks",
+      "prompt": "In Twin Peaks season 3, what's last question Mr. C asks Phillip Jeffries when meeting him?",
+      "expected_answer": "Who is Judy?"
+    },
+    {
+      "id": "twin_peaks_010",
+      "category": "twin_peaks",
+      "domain": "Twin Peaks",
+      "prompt": "In Twin Peaks season 3, how much money is Shelly giving to Becky at Double R?",
+      "expected_answer": "$72"
+    },
+    {
+      "id": "twin_peaks_011",
+      "category": "twin_peaks",
+      "domain": "Twin Peaks",
+      "prompt": "Try to guess: Chris Isaak is walking in a RV park. He is an agent, and he sees a car with something written on the main glass. What's the sentence saying?",
+      "expected_answer": "Let's rock"
+    },
+    {
+      "id": "twin_peaks_012",
+      "category": "twin_peaks",
+      "domain": "Twin Peaks",
+      "prompt": "When opening the safe to show the two accounting books to Sheriff Truman, Josie finds only one of them. Which one does she find? The true one, or the fake one?",
+      "expected_answer": "fake"
+    },
+    {
+      "id": "twin_peaks_013",
+      "category": "twin_peaks",
+      "domain": "Twin Peaks",
+      "prompt": "What's the animal that whispers Judy towards the end of Fire Walk with Me?",
+      "expected_answer": "Monkey"
+    },
+    {
+      "id": "twin_peaks_014",
+      "category": "twin_peaks",
+      "domain": "Twin Peaks",
+      "prompt": "In Twin Peaks season 3, who are the two people watching Dr. Jacoby's video about golden shovels?",
+      "expected_answer": "Jerry Horne and Nadine"
+    },
+    {
+      "id": "twin_peaks_015",
+      "category": "twin_peaks",
+      "domain": "Twin Peaks",
+      "prompt": "In Twin Peaks season 3, how much money does Cooper/Mr. Jackpot win at the Silver Mustang?",
+      "expected_answer": "$425,000"
+    },
+    {
+      "id": "twin_peaks_016",
+      "category": "twin_peaks",
+      "domain": "Twin Peaks",
+      "prompt": "In Twin Peaks season 3, how much money does Cooper/Dougie owe to the sharks?",
+      "expected_answer": "$52,000"
+    },
+    {
+      "id": "twin_peaks_017",
+      "category": "twin_peaks",
+      "domain": "Twin Peaks",
+      "prompt": "In the last episode of Twin Peaks 3, what's the name of the cafe where Cooper drops a gun into frying oil after defeating two guys?",
+      "expected_answer": "Judy"
+    },
+    {
+      "id": "twin_peaks_018",
+      "category": "twin_peaks",
+      "domain": "Twin Peaks",
+      "prompt": "What's the license plate of Dougie Jones in Twin Peaks?",
+      "expected_answer": "DUGE LV"
+    },
+    {
+      "id": "twin_peaks_019",
+      "category": "twin_peaks",
+      "domain": "Twin Peaks",
+      "prompt": "In season 3 of Twin Peaks, what's the time on the watch of the Ronette Pulaski looking girl?",
+      "expected_answer": "2:53"
+    }
+  ]
+}
