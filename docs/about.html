@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - TwinPeaks Bench</title>
+    <meta name="description" content="Learn about the TwinPeaks Bench LLM evaluation methodology">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .about-section {
+            background: var(--bg-secondary);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .about-section h2 {
+            color: var(--accent-red-light);
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .about-section h3 {
+            color: var(--accent-gold);
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .about-section p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .about-section ul {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .about-section code {
+            background: var(--bg-tertiary);
+            padding: 0.2rem 0.5rem;
+            border-radius: 3px;
+            color: var(--accent-gold);
+            font-family: 'Courier New', monospace;
+        }
+
+        .metric-explanation {
+            background: var(--bg-tertiary);
+            padding: 1rem;
+            border-radius: 4px;
+            margin: 1rem 0;
+            border-left: 4px solid var(--accent-red);
+        }
+
+        .metric-explanation strong {
+            color: var(--accent-gold);
+        }
+
+        .model-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .model-item {
+            background: var(--bg-tertiary);
+            padding: 1rem;
+            border-radius: 4px;
+            text-align: center;
+            color: var(--text-primary);
+        }
+
+        .github-link {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.75rem 1.5rem;
+            background: var(--accent-red);
+            color: var(--text-primary);
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+
+        .github-link:hover {
+            background: var(--accent-red-light);
+            box-shadow: 0 0 15px var(--accent-red);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="nav-icon">🎬</span>
+                <span class="nav-title">TwinPeaks Bench</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Leaderboard</a>
+                <a href="explorer.html" class="nav-link">Questions</a>
+                <a href="about.html" class="nav-link active">About</a>
+                <a href="https://github.com/frabert101010/twinpeaks-bench" class="nav-link" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section class="section">
+        <div class="container">
+            <h1 class="section-title">📖 About TwinPeaks Bench</h1>
+
+            <div class="about-section">
+                <h2>🎯 What is TwinPeaks Bench?</h2>
+                <p>
+                    TwinPeaks Bench is a specialized LLM evaluation benchmark that tests how well large language models know obscure details from the cult classic TV series Twin Peaks. It consists of 26 carefully curated questions covering characters, plot details, and memorable moments from the show.
+                </p>
+                <p>
+                    Unlike traditional benchmarks that test reasoning or coding abilities, TwinPeaks Bench evaluates pure knowledge recall of specific factual information. This makes it an interesting test of how well models have encoded niche cultural knowledge in their training data.
+                </p>
+            </div>
+
+            <div class="about-section">
+                <h2>🔬 Methodology</h2>
+
+                <h3>Question Set</h3>
+                <p>
+                    The benchmark consists of 26 questions ranging from very easy to very hard. Each question has a specific expected answer and is rated on a 5-star difficulty scale:
+                </p>
+                <ul>
+                    <li><strong>⭐ Very Easy:</strong> General knowledge anyone familiar with the show would know</li>
+                    <li><strong>⭐⭐ Easy:</strong> Basic plot points and main character details</li>
+                    <li><strong>⭐⭐⭐ Medium:</strong> Specific details requiring careful viewing</li>
+                    <li><strong>⭐⭐⭐⭐ Hard:</strong> Obscure facts and minor character details</li>
+                    <li><strong>⭐⭐⭐⭐⭐ Very Hard:</strong> Extremely specific details only true fans would recall</li>
+                </ul>
+
+                <h3>Evaluation Modes</h3>
+                <p>
+                    Each model is tested in two different modes:
+                </p>
+                <div class="metric-explanation">
+                    <strong>NO SEARCH:</strong> Models answer based solely on their internal knowledge from training data. This tests what information they've memorized.
+                </div>
+                <div class="metric-explanation">
+                    <strong>WITH SEARCH:</strong> Models can use web search capabilities to look up information. This tests their ability to find and extract correct information.
+                </div>
+
+                <h3>Scoring System</h3>
+                <p>
+                    Each model provides 3 independent answers per question (for statistical robustness). Responses are evaluated by Claude Haiku acting as a judge, which:
+                </p>
+                <ul>
+                    <li>Compares the model's answer to the expected answer</li>
+                    <li>Determines if the answer is correct (even if phrased differently)</li>
+                    <li>Provides reasoning for the judgment</li>
+                </ul>
+
+                <h3>Metrics</h3>
+                <p>We report three key metrics for each model:</p>
+                <div class="metric-explanation">
+                    <strong>Accuracy:</strong> Overall percentage of questions answered correctly across all 3 trials (out of 78 total attempts per mode)
+                </div>
+                <div class="metric-explanation">
+                    <strong>Pass@1:</strong> Percentage of questions where the model got it right on the first try
+                </div>
+                <div class="metric-explanation">
+                    <strong>Pass@3:</strong> Percentage of questions where the model got it right at least once in 3 attempts
+                </div>
+            </div>
+
+            <div class="about-section">
+                <h2>🤖 Models Tested</h2>
+                <p>We evaluate the latest frontier models from leading AI labs:</p>
+                <div class="model-list">
+                    <div class="model-item">Claude Sonnet 4.5</div>
+                    <div class="model-item">Claude Opus 4.5</div>
+                    <div class="model-item">GPT-5.1</div>
+                    <div class="model-item">GPT-5.2</div>
+                    <div class="model-item">Gemini 3</div>
+                    <div class="model-item">Gemini Flash</div>
+                </div>
+                <p>
+                    Each model completes 156 total evaluations: 26 questions × 2 modes (no search/with search) × 3 trials = 156 responses per model.
+                </p>
+            </div>
+
+            <div class="about-section">
+                <h2>📊 Total Evaluations</h2>
+                <p>
+                    The complete benchmark consists of <strong>936 individual test records</strong>:
+                </p>
+                <ul>
+                    <li>6 models tested</li>
+                    <li>26 questions per model</li>
+                    <li>2 modes (no search/with search)</li>
+                    <li>3 trials per question</li>
+                    <li>= 936 total evaluations</li>
+                </ul>
+            </div>
+
+            <div class="about-section">
+                <h2>💡 Why Twin Peaks?</h2>
+                <p>
+                    Twin Peaks makes an excellent benchmark subject for several reasons:
+                </p>
+                <ul>
+                    <li><strong>Culturally significant:</strong> Well-known show that likely appears in training data</li>
+                    <li><strong>Rich detail:</strong> Complex plot with many specific facts to test</li>
+                    <li><strong>Difficulty spectrum:</strong> Easy to create questions ranging from trivial to extremely obscure</li>
+                    <li><strong>Objective answers:</strong> Most questions have clear, verifiable correct answers</li>
+                    <li><strong>Limited scope:</strong> Finite source material (2 seasons + movie) makes it a contained knowledge domain</li>
+                </ul>
+            </div>
+
+            <div class="about-section">
+                <h2>🛠️ Technical Details</h2>
+                <p>
+                    The evaluation pipeline is built with Python and uses:
+                </p>
+                <ul>
+                    <li><strong>OpenAI API:</strong> For GPT models</li>
+                    <li><strong>Anthropic API:</strong> For Claude models and judge evaluation</li>
+                    <li><strong>Google Gemini API:</strong> For Gemini models</li>
+                    <li><strong>SQLite:</strong> For storing evaluation history</li>
+                    <li><strong>GitHub Pages:</strong> For hosting this website</li>
+                </ul>
+                <p>
+                    The full source code, question set, and evaluation results are available on GitHub:
+                </p>
+                <a href="https://github.com/frabert101010/twinpeaks-bench" class="github-link" target="_blank">
+                    View on GitHub →
+                </a>
+            </div>
+
+            <div class="about-section">
+                <h2>🚀 Running Your Own Evaluation</h2>
+                <p>
+                    You can run the benchmark yourself with your own API keys:
+                </p>
+                <ol style="color: var(--text-secondary); line-height: 1.8; margin-left: 2rem;">
+                    <li>Clone the repository</li>
+                    <li>Install dependencies: <code>pip install -r requirements.txt</code></li>
+                    <li>Copy <code>.env.example</code> to <code>.env</code> and add your API keys</li>
+                    <li>Run: <code>python run_full_benchmark.py</code></li>
+                </ol>
+                <p>
+                    See the repository README for detailed instructions.
+                </p>
+            </div>
+
+            <div class="about-section">
+                <h2>👤 About the Creator</h2>
+                <p>
+                    TwinPeaks Bench was created by <a href="https://github.com/frabert101010" target="_blank" style="color: var(--accent-red-light);">@frabert101010</a> as an experiment in specialized LLM evaluation.
+                </p>
+                <p>
+                    Questions, feedback, or ideas? Open an issue on the <a href="https://github.com/frabert101010/twinpeaks-bench/issues" target="_blank" style="color: var(--accent-red-light);">GitHub repository</a>!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>TwinPeaks Bench - LLM Evaluation Benchmark</p>
+            <p>
+                <a href="https://github.com/frabert101010/twinpeaks-bench" target="_blank">GitHub</a> ·
+                Created by <a href="https://github.com/frabert101010" target="_blank">@frabert101010</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

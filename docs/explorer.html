@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Explorer - TwinPeaks Bench</title>
+    <meta name="description" content="Explore all 26 Twin Peaks questions and see how each model responded">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/explorer.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="nav-icon">🎬</span>
+                <span class="nav-title">TwinPeaks Bench</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Leaderboard</a>
+                <a href="explorer.html" class="nav-link active">Questions</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="https://github.com/frabert101010/twinpeaks-bench" class="nav-link" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Explorer Section -->
+    <section class="section">
+        <div class="container">
+            <div class="explorer-header">
+                <h1 class="section-title">🔍 Question Explorer</h1>
+                <p class="explorer-subtitle">Explore all 26 questions and see how each model responded</p>
+            </div>
+
+            <!-- Filters -->
+            <div class="filters">
+                <div class="filter-group">
+                    <label>Search Mode:</label>
+                    <select id="mode-filter">
+                        <option value="all">All Modes</option>
+                        <option value="NO SEARCH">No Search</option>
+                        <option value="WITH SEARCH">With Search</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Model:</label>
+                    <select id="model-filter">
+                        <option value="all">All Models</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Difficulty:</label>
+                    <select id="difficulty-filter">
+                        <option value="all">All</option>
+                        <option value="5">⭐⭐⭐⭐⭐ Very Hard</option>
+                        <option value="4">⭐⭐⭐⭐ Hard</option>
+                        <option value="3">⭐⭐⭐ Medium</option>
+                        <option value="2">⭐⭐ Easy</option>
+                        <option value="1">⭐ Very Easy</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Result:</label>
+                    <select id="result-filter">
+                        <option value="all">All Results</option>
+                        <option value="correct">✅ Correct Only</option>
+                        <option value="incorrect">❌ Incorrect Only</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Question Navigation -->
+            <div class="question-nav">
+                <button id="prev-btn" class="nav-btn">← Previous</button>
+                <span id="question-counter" class="question-counter">Question 1 of 26</span>
+                <button id="next-btn" class="nav-btn">Next →</button>
+            </div>
+
+            <!-- Question Display -->
+            <div id="question-display" class="question-display">
+                <!-- Will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>TwinPeaks Bench - LLM Evaluation Benchmark</p>
+            <p>
+                <a href="https://github.com/frabert101010/twinpeaks-bench" target="_blank">GitHub</a> ·
+                Created by <a href="https://github.com/frabert101010" target="_blank">@frabert101010</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/explorer.js"></script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TwinPeaks Bench - LLM Evaluation Benchmark</title>
+    <meta name="description" content="Comprehensive LLM evaluation benchmark testing knowledge on Twin Peaks trivia">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="nav-icon">🎬</span>
+                <span class="nav-title">TwinPeaks Bench</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link active">Leaderboard</a>
+                <a href="explorer.html" class="nav-link">Questions</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="https://github.com/frabert101010/twinpeaks-bench" class="nav-link" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">TwinPeaks Bench</h1>
+                <p class="hero-subtitle">How well do LLMs know Twin Peaks?</p>
+                <p class="hero-description">
+                    A comprehensive evaluation benchmark testing LLM knowledge on 26 carefully curated Twin Peaks questions covering obscure details from the series.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-value">26</div>
+                        <div class="stat-label">Questions</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">6</div>
+                        <div class="stat-label">Models</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value">936</div>
+                        <div class="stat-label">Evaluations</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leaderboard Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">🏆 Leaderboard</h2>
+                <div class="mode-toggle">
+                    <button class="mode-btn active" data-mode="no-search">No Search</button>
+                    <button class="mode-btn" data-mode="with-search">With Search</button>
+                </div>
+            </div>
+
+            <div class="leaderboard">
+                <table class="leaderboard-table" id="leaderboard">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th class="sortable" data-sort="model">Model</th>
+                            <th class="sortable active desc" data-sort="accuracy">
+                                Accuracy
+                                <span class="sort-icon">▼</span>
+                            </th>
+                            <th class="sortable" data-sort="pass1">
+                                Pass@1
+                                <span class="sort-icon"></span>
+                            </th>
+                            <th class="sortable" data-sort="pass3">
+                                Pass@3
+                                <span class="sort-icon"></span>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="leaderboard-body">
+                        <!-- Will be populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="chart-container">
+                <h3 class="chart-title">Model Performance Comparison</h3>
+                <div class="chart" id="performance-chart">
+                    <!-- Will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <div class="insights">
+                <h3 class="insights-title">Key Insights</h3>
+                <div class="insight-grid" id="insights">
+                    <!-- Will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Want to explore the questions and responses?</h2>
+            <p>See how each model answered every question, compare responses side-by-side, and discover which questions were the hardest.</p>
+            <a href="explorer.html" class="btn-primary">Explore Questions</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>TwinPeaks Bench - LLM Evaluation Benchmark</p>
+            <p>
+                <a href="https://github.com/frabert101010/twinpeaks-bench" target="_blank">GitHub</a> ·
+                Created by <a href="https://github.com/frabert101010" target="_blank">@frabert101010</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/leaderboard.js"></script>
+</body>
+</html>
