@@ -43,9 +43,13 @@
 .results-table thead {
     background: var(--bg-tertiary);
     border-bottom: 2px solid var(--accent-red);
+}
+
+.results-table thead tr {
     position: sticky;
     top: 0;
-    z-index: 10;
+    z-index: 100;
+    background: var(--bg-tertiary);
 }
 
 .results-table th {
@@ -54,6 +58,11 @@
     color: var(--accent-gold);
     font-weight: bold;
     border-right: 1px solid var(--border-color);
+    background: var(--bg-tertiary);
+}
+
+.results-table thead tr {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .results-table th:first-child {
