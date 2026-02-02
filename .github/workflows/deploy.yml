@@ -1,16 +1,16 @@
 name: Deploy to GitHub Pages
 
-  on:
+on:
     push:
       branches:
         - main
 
-  permissions:
+permissions:
     contents: read
     pages: write
     id-token: write
 
-  jobs:
+jobs:
     deploy:
       runs-on: ubuntu-latest
       steps:
