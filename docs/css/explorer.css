@@ -28,6 +28,8 @@
 /* Results Table */
 .results-table-container {
     overflow-x: auto;
+    overflow-y: auto;
+    max-height: 80vh;
     background: var(--bg-secondary);
     border-radius: 8px;
     border: 1px solid var(--border-color);
@@ -48,7 +50,7 @@
 .results-table thead tr {
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 50;
     background: var(--bg-tertiary);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
