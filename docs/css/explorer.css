@@ -50,6 +50,7 @@
     top: 0;
     z-index: 100;
     background: var(--bg-tertiary);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .results-table th {
@@ -59,10 +60,6 @@
     font-weight: bold;
     border-right: 1px solid var(--border-color);
     background: var(--bg-tertiary);
-}
-
-.results-table thead tr {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .results-table th:first-child {
