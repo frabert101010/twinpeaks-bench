@@ -26,6 +26,71 @@
     }
   },
   {
+    "model": "Gemini 3",
+    "no_search": {
+      "pass1": 62.96,
+      "pass3": 81.48,
+      "accuracy": 67.9
+    },
+    "with_search": {
+      "pass1": 66.67,
+      "pass3": 66.67,
+      "accuracy": 66.67
+    }
+  },
+  {
+    "model": "GPT-5.1",
+    "no_search": {
+      "pass1": 59.26,
+      "pass3": 70.37,
+      "accuracy": 60.49
+    },
+    "with_search": {
+      "pass1": 66.67,
+      "pass3": 83.33,
+      "accuracy": 77.78
+    }
+  },
+  {
+    "model": "Gemini 3 Flash",
+    "no_search": {
+      "pass1": 62.96,
+      "pass3": 66.67,
+      "accuracy": 59.26
+    },
+    "with_search": {
+      "pass1": 66.67,
+      "pass3": 83.33,
+      "accuracy": 66.67
+    }
+  },
+  {
+    "model": "Claude Opus 4.5",
+    "no_search": {
+      "pass1": 59.26,
+      "pass3": 59.26,
+      "accuracy": 56.79
+    },
+    "with_search": {
+      "pass1": 33.33,
+      "pass3": 50.0,
+      "accuracy": 38.89
+    }
+  },
+  {
+    "model": "Claude Sonnet 4.5",
+    "no_search": {
+      "pass1": 51.85,
+      "pass3": 66.67,
+      "accuracy": 53.09
+    },
+    "with_search": {
+      "pass1": 50.0,
+      "pass3": 66.67,
+      "accuracy": 55.56
+    }
+  },
+  {
     "model": "Claude Sonnet 4.6",
     "no_search": {
       "pass1": 42.31,
@@ -36,6 +101,19 @@
       "pass1": 84.62,
       "pass3": 92.31,
       "accuracy": 80.77
+    }
+  },
+  {
+    "model": "GPT-5.2",
+    "no_search": {
+      "pass1": 40.74,
+      "pass3": 51.85,
+      "accuracy": 39.51
+    },
+    "with_search": {
+      "pass1": 66.67,
+      "pass3": 83.33,
+      "accuracy": 72.22
     }
   }
 ]
